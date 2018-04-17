@@ -17,7 +17,7 @@ yarn add react-native-mask-loader
 ## Usage
 
 ```
-import Loader from 'react-native-mask-loader';
+import Loader from 'react-native-svg-mask-loader';
 
 <Loader
   isLoaded={this.state.appHasLoaded}

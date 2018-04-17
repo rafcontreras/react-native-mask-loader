@@ -18,7 +18,8 @@ export default class App extends React.Component<{}, State> {
   constructor() {
     super();
 
-    this._image = require('./assets/twitter.png');
+    this._stencil = require("./assets/outline.svg");
+    this._solid = require("./assets/solid.svg");
   }
 
   componentDidMount() {
@@ -28,7 +29,7 @@ export default class App extends React.Component<{}, State> {
   resetAnimation() {
     this.setState({
       appReady: false,
-      rootKey: Math.random()
+      rootKey: Math.random(),
     });
 
     setTimeout(() => {
@@ -43,14 +44,19 @@ export default class App extends React.Component<{}, State> {
       <View key={this.state.rootKey} style={styles.root}>
         <Loader
           isLoaded={this.state.appReady}
-          imageSource={this._image}
-          backgroundStyle={styles.loadingBackgroundStyle}
+          maskWidth={100}
+          maskHeight={100}
+          outlineSource={this._outline}
+          solidSource={this._solid}
+          brandColor={'#f0b41d'}
         >
           <View style={styles.container}>
-            <Button onPress={() => {
-              this.resetAnimation();
-            }} title="See it again">
-            </Button>
+            <Button
+              onPress={() => {
+                this.resetAnimation();
+              }}
+              title="See it again"
+            />
           </View>
         </Loader>
       </View>
