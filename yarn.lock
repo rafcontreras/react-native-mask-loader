@@ -3199,6 +3199,12 @@ react-devtools-core@3.0.0:
     shell-quote "^1.6.1"
     ws "^2.0.3"
 
+react-native-svg-mask-loader@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/react-native-svg-mask-loader/-/react-native-svg-mask-loader-0.0.3.tgz#129c7ed074a8dcc842c5f664aa649313ee43ccb6"
+  dependencies:
+    react-native-svg-uri "^1.2.3"
+
 react-native-svg-uri@^1.2.3:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/react-native-svg-uri/-/react-native-svg-uri-1.2.3.tgz#2f67f30564068a0fee68a751845332a5185a1aab"

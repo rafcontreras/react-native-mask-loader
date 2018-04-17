@@ -1,6 +1,6 @@
 {
   "name": "react-native-svg-mask-loader",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "React Native App Loader that shows an expanding image as a mask on your app. Direct rip of Twitter's loading animation. (Forked from https://github.com/TheSavior/react-native-mask-loader)",
   "main": "lib/index.js",
   "author": "Rafael Contreras <raf@contrer.as>",
@@ -32,6 +32,7 @@
     "prepublish": "babel src/ -d lib && flow-copy-source src lib"
   },
   "dependencies": {
+    "react-native-svg-mask-loader": "^0.0.3",
     "react-native-svg-uri": "^1.2.3"
   }
 }
