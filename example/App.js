@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 import { Util } from 'expo';
 
-import Loader from 'react-native-mask-loader';
+import Loader from 'react-native-svg-mask-loader';
 
 type State = {|
   appReady: boolean,
