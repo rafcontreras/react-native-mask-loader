@@ -10,8 +10,6 @@ import {
   View
 } from "react-native";
 
-import SvgUri from "react-native-svg-uri";
-
 type Props = {|
   +children: React.Node,
   +isLoaded: boolean,
@@ -149,11 +147,7 @@ export default class Loader extends React.Component<Props, State> {
               <Animated.View
                 style={[StyleSheet.absoluteFill, outlineAnimStyle]}
               >
-                <SvgUri
-                  width={maskWidth}
-                  height={maskHeight}
-                  source={solidSource}
-                />
+                {solidSource}
               </Animated.View>
             ) : (
               <Animated.View
@@ -165,12 +159,7 @@ export default class Loader extends React.Component<Props, State> {
               />
             )}
             <View style={[StyleSheet.absoluteFill]}>
-              <SvgUri
-                width={maskWidth}
-                height={maskHeight}
-                source={outlineSource}
-                fill={brandColor}
-              />
+              {outlineSource}
             </View>
           </View>
         </Animated.View>
