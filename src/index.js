@@ -158,9 +158,7 @@ export default class Loader extends React.Component<Props, State> {
                 ]}
               />
             )}
-            <View style={[StyleSheet.absoluteFill]}>
-              {outlineSource}
-            </View>
+            <View style={[StyleSheet.absoluteFill]}>{outlineSource}</View>
           </View>
         </Animated.View>
       </View>

@@ -1,38 +1,28 @@
-# react-native-mask-loader
+# react-native-svg-mask-loader
 
 This component provides a loading screen for React Native apps that is meant to reproduce Twitter's app loading animation.
-
-There is an accompanying blog post at https://facebook.github.io/react-native/blog/2018/01/18/implementing-twitters-app-loading-animation-in-react-native.html.
-
-![Loader](assets/loader.gif)
 
 ## Installation
 
 ```
-yarn add react-native-mask-loader
+yarn add react-native-svg-mask-loader
 
-# or npm install react-native-mask-loader
+# or npm i -S react-native-svg-mask-loader
 ```
 
 ## Usage
 
-```
+```javascript
 import Loader from 'react-native-svg-mask-loader';
 
 <Loader
-  isLoaded={this.state.appHasLoaded}
-  imageSource={require('./assets/twitter.png')}
-  backgroundStyle={styles.loadingBackgroundStyle}
+  isLoaded={this.state.appReady}
+  maskWidth={100}
+  maskHeight={100}
+  outlineSource={<MaskOutline width={100} fill={"#f0b41d"} />}
+  solidSource={<MaskSolid width={100} />}
+  brandColor={"#f0b41d"}
 >
   <AppContent />
 </Loader>
 ```
-
-## Demo
-The gif above looks a bit stuttery, but it feels quite smooth on a real device.
-
-In the [example](example) directory is a basic app created with [create-react-native-app](https://github.com/react-community/create-react-native-app) demonstrating this component. Running code is the best documentation so check it out to understand how it works.
-
-It is [published to expo](https://expo.io/@eliwhite/react-native-mask-loader-example) and you should check it out on your device via the expo app:
-
-![Loader](assets/qrcode.png)

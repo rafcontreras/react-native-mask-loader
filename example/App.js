@@ -1,18 +1,18 @@
-import React from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
-import { Util } from 'expo';
+import React from "react";
+import { StyleSheet, Text, View, Button } from "react-native";
+import { Util } from "expo";
 
-import Loader from 'react-native-svg-mask-loader';
+import Loader from "react-native-svg-mask-loader";
 
 type State = {|
   appReady: boolean,
-  rootKey: number,
+  rootKey: number
 |};
 
 export default class App extends React.Component<{}, State> {
   state = {
     appReady: false,
-    rootKey: Math.random(),
+    rootKey: Math.random()
   };
 
   constructor() {
@@ -29,12 +29,12 @@ export default class App extends React.Component<{}, State> {
   resetAnimation() {
     this.setState({
       appReady: false,
-      rootKey: Math.random(),
+      rootKey: Math.random()
     });
 
     setTimeout(() => {
       this.setState({
-        appReady: true,
+        appReady: true
       });
     }, 1000);
   }
@@ -48,7 +48,7 @@ export default class App extends React.Component<{}, State> {
           maskHeight={100}
           outlineSource={this._outline}
           solidSource={this._solid}
-          brandColor={'#f0b41d'}
+          brandColor={"#f0b41d"}
         >
           <View style={styles.container}>
             <Button
@@ -66,16 +66,16 @@ export default class App extends React.Component<{}, State> {
 
 const styles = StyleSheet.create({
   root: {
-    flex: 1,
+    flex: 1
   },
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center"
   },
 
   loadingBackgroundStyle: {
-    backgroundColor: 'rgba(125, 125, 255, 1)',
-  },
+    backgroundColor: "rgba(125, 125, 255, 1)"
+  }
 });
